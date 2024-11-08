@@ -1,0 +1,481 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(./fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400 700;
+}
+
+.regularMontserrat {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.boldMontserrat {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.regularRaleway {
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.boldRaleway {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.none {
+  display: none !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.modalShow {
+  overflow-y: hidden;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  color: #fff;
+  background-image: linear-gradient(90deg, #7cc94c, #c3e0a8);
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.mainContainer {
+  width: 100%;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flexContainerCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#content {
+  margin: 20px;
+}
+
+#logoHeader {
+  width: 400px;
+  margin: 20px 0;
+}
+
+#searchContent {
+  gap: 0;
+}
+
+#searchImgContainer {
+  background-color: #385ea9;
+  padding: 6px 10px;
+  border: 2px solid #385ea9;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+#searchImg {
+  width: 22px;
+}
+
+#searchInput {
+  text-indent: 4px;
+  font-size: 16px;
+  padding: 8px 0;
+  border: 2px solid #385ea9;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: none;
+}
+
+.cardBackside {
+  background-image: url("./images/card.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 10px solid #001c5d;
+  border-radius: 10px;
+  height: 300px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.nameContentBackside {
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.nameBackside {
+  color: #ffcb05;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #001c5d;
+}
+
+.typeBackside {
+  color: #ffcb05;
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #001c5d;
+}
+
+.imgBackside {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.imgBackside:hover {
+  z-index: 1;
+  transform: scale(1.4);
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-16px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+.cardFrontside {
+  justify-content: flex-start;
+  gap: 2px;
+  border: 10px solid #f9d74e;
+  border-radius: 10px;
+  height: 300px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.nameContentFrontside {
+  justify-content: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+.nameFrontside,
+.hpStat {
+  color: #16100b;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hp {
+  color: #16100b;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.imgContentFrontside {
+  background-color: #fefce8;
+  border: 4px solid #ae910b;
+  border-radius: 10px;
+  width: 88%;
+  height: 90px;
+}
+
+.imgFrontside {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.imgFrontside:hover {
+  z-index: 1;
+  transform: scale(1.2);
+}
+
+.statsFrontside {
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  gap: 0 !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #ae910b;
+  width: 100%;
+  height: 34px;
+}
+
+.statsTitle {
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 2px;
+  width: 80px;
+}
+
+.statsTitle:hover {
+  background-color: #7f7f7f !important;
+}
+
+.activeStatsTab {
+  background-color: #ebe9e9 !important;
+}
+
+.aboutTitle {
+  background-color: #a18d75;
+  color: #3a5ca8;
+  z-index: 9999;
+}
+
+.baseTitle {
+  background-color: #a18d75;
+  color: #ffcb05;
+  z-index: 9999;
+}
+
+.statsContentAll {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.statsContentAll {
+  flex-wrap: nowrap;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.aboutStatsContent table {
+  text-align: left;
+}
+
+.aboutStatsContent td:first-child {
+  width: 60px;
+}
+
+.aboutStatsContent td {
+  vertical-align: top;
+}
+
+#modal {
+  padding: 20px;
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  height: 80%;
+  width: 50%;
+  border-radius: 20px;
+  background-color: #1d4d0099;
+  z-index: 99;
+}
+
+#modalContainerCol {
+  height: calc(100% - 80px);
+  z-index: 999;
+}
+
+#closeContainer {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#closeBtn {
+  width: 70px;
+  cursor: pointer;
+}
+
+.arrows {
+  width: 60px;
+  cursor: pointer;
+}
+
+#loadPokemons {
+  padding: 6px 20px;
+  margin: 20px;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#loadingImg {
+  width: 100px;
+}
+
+/* Breakpoint 1 - Mobile Phones */
+@media screen and (max-width: 480px) {
+  #logoHeader {
+    width: 300px;
+    margin: 20px 0;
+  }
+
+  #modalContainer {
+    gap: 6px;
+  }
+
+  #modal {
+    padding: 4px;
+    position: fixed;
+    top: 10%;
+    left: 2%;
+    height: 80%;
+    width: 94%;
+  }
+
+  #closeBtn {
+    width: 26px;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+
+  .arrows {
+    width: 24px;
+  }
+}
+
+/* Breakpoint 2 - Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #modalContainer {
+    gap: 20px;
+  }
+
+  #modal {
+    padding: 4px;
+    position: fixed;
+    top: 10%;
+    left: 2%;
+    height: 80%;
+    width: 94%;
+  }
+
+  #closeBtn {
+    width: 30px;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+
+  .arrows {
+    width: 30px;
+  }
+}
+
+/* Breakpoint 3 - Tablets - Laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #modalContainer {
+    gap: 20px;
+  }
+
+  #modal {
+    padding: 4px;
+    position: fixed;
+    top: 10%;
+    left: 2%;
+    height: 80%;
+    width: 94%;
+  }
+
+  #closeBtn {
+    width: 34px;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+
+  .arrows {
+    width: 34px;
+  }
+}
+
+/* Breakpoint 4 - Laptops - Desktops */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  #modalContainer {
+    gap: 20px;
+  }
+
+  #modal {
+    padding: 4px;
+    position: fixed;
+    top: 10%;
+    left: 2%;
+    height: 80%;
+    width: 94%;
+  }
+
+  #closeBtn {
+    width: 38px;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+
+  .arrows {
+    width: 38px;
+  }
+}
+
+/* Breakpoint 5 - Desktops - TVs */
+@media screen and (min-width: 1201px) {
+  #modalContainer {
+    gap: 20px;
+  }
+
+  #modal {
+    padding: 4px;
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    height: 80%;
+    width: 60%;
+  }
+
+  #closeBtn {
+    width: 42px;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+
+  .arrows {
+    width: 42px;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokeMon</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" async></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <header>
+        <div class="flexContainerCol">
+          <div class="flexItem">
+            <img id="logoHeader" src="./images/logo.png" alt="logo" />
+          </div>
+          <div id="searchContent" class="flexItem flexContainer">
+            <div id="searchImgContainer" class="flexContainer">
+              <img id="searchImg" src="./images/search.png" alt="search icon" />
+            </div>
+            <div id="searchInputContainer">
+              <input
+                type="text"
+                id="searchInput"
+                name="searchInput"
+                placeholder="Min. 3 Alphabetical Char."
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="sectionContainer">
+          <div id="content" class="flexContainer"></div>
+          <div id="modal" class="none">
+            <div id="closeContainer" class="flexContainer">
+              <img id="closeBtn" src="./images/close.png" alt="close icon" />
+            </div>
+
+            <div id="modalContainerCol" class="flexContainerCol">
+              <div id="modalContainer" class="flexContainer">
+                <div id="arrowLeftContainer">
+                  <img
+                    id="arrowLeft"
+                    class="arrows"
+                    src="./images/arrow-left.png"
+                    alt="arrow icon"
+                  />
+                </div>
+                <div id="modalCardContent"></div>
+                <div id="arrowRightContainer">
+                  <img
+                    id="arrowRight"
+                    class="arrows"
+                    src="./images/arrow-right.png"
+                    alt="arrow icon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
